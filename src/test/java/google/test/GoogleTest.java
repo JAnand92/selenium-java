@@ -4,25 +4,32 @@ import baseTest.BaseTest;
 import google.main.GoogleMainPage;
 import google.result.GoogleResultPage;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class GoogleTest extends BaseTest {
 
     private GoogleMainPage googleMainPage;
     private GoogleResultPage googleResultPage;
 
-    @Before
+    @DataProvider
+    public Object[][] getData() {
+        return new Object[][] {
+                {"selenium", 3},
+                {"docker", 2},
+        };
+    }
+
+    @BeforeTest
     public void setupPages() {
         this.googleMainPage = new GoogleMainPage(driver);
         this.googleResultPage = new GoogleResultPage(driver);
     }
 
-    @Test
-    public void googleWorkflow() {
 
-        String keyword = "Selenium Webdriver";
-        int index = 4;
+    @Test(dataProvider = "getData")
+    public void googleWorkflow(String keyword, int index) {
 
         googleMainPage.goTo("https://www.google.com/");
         Assert.assertTrue(googleMainPage.getSearchWidget().isDisplayed());
@@ -43,15 +50,5 @@ public class GoogleTest extends BaseTest {
         System.out.println(
                 googleResultPage.getResultStat().getStats()
         );
-
     }
-
-    /*@DataProvider
-    public Object[][] getData() {
-
-        return new Object[][] {
-                {"selenium", 3},
-                {"docker", 2}
-        };
-    }*/
 }
