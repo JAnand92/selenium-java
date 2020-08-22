@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Google-Search" duration-ms="23048" started-at="2020-08-21T10:21:49 BST" finished-at="2020-08-21T10:22:12 BST">
+    <groups>
+    </groups>
+    <test name="Google-Search-Test" duration-ms="23048" started-at="2020-08-21T10:21:49 BST" finished-at="2020-08-21T10:22:12 BST">
+      <class name="google.test.GoogleTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:google.test.GoogleTest@6767c1fc]" name="setup" is-config="true" duration-ms="4284" started-at="2020-08-21T10:21:49 BST" finished-at="2020-08-21T10:21:54 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setupPages()[pri:0, instance:google.test.GoogleTest@6767c1fc]" name="setupPages" is-config="true" duration-ms="38" started-at="2020-08-21T10:21:54 BST" depends-on-methods="baseTest.BaseTest.setup" finished-at="2020-08-21T10:21:54 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method status="PASS" signature="googleWorkflow(java.lang.String, int)[pri:0, instance:google.test.GoogleTest@6767c1fc]" name="googleWorkflow" duration-ms="11440" started-at="2020-08-21T10:21:54 BST" data-provider="getData" finished-at="2020-08-21T10:22:05 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[selenium]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleWorkflow -->
+        <test-method status="PASS" signature="googleWorkflow(java.lang.String, int)[pri:0, instance:google.test.GoogleTest@6767c1fc]" name="googleWorkflow" duration-ms="6449" started-at="2020-08-21T10:22:05 BST" data-provider="getData" finished-at="2020-08-21T10:22:12 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docker]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleWorkflow -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.test.GoogleTest@6767c1fc]" name="tearDown" is-config="true" duration-ms="804" started-at="2020-08-21T10:22:12 BST" finished-at="2020-08-21T10:22:12 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- google.test.GoogleTest -->
+    </test> <!-- Google-Search-Test -->
+  </suite> <!-- Google-Search -->
+</testng-results>
