@@ -3,7 +3,7 @@ package google.test;
 import baseTest.BaseTest;
 import google.main.GoogleMainPage;
 import google.result.GoogleResultPage;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -51,4 +51,5 @@ public class GoogleTest extends BaseTest {
                 googleResultPage.getResultStat().getStats()
         );
     }
+
 }
